@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://lucky-file-project.oss-cn-hangzhou.aliyuncs.com/lucky.png"
+    />
+    <title>圣杯布局Float</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .header {
+        height: 60px;
+      }
+
+      .footer {
+        height: 60px;
+        clear: both;
+      }
+
+      .container {
+        height: calc(100vh - 120px);
+        padding: 0 200px;
+      }
+
+      .container div {
+        position: relative;
+        float: left;
+      }
+
+      .main {
+        width: 100%;
+        height: calc(100vh - 120px);
+        text-align: center;
+        line-height: calc(100vh - 120px);
+        background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+      }
+
+      .left {
+        margin-left: -100%;
+        left: -200px;
+        width: 200px;
+      }
+
+      .right {
+        margin-left: -200px;
+        left: 200px;
+        width: 200px;
+      }
+
+      .footer,
+      .header {
+        text-align: center;
+        line-height: 60px;
+        background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+      }
+
+      .left,
+      .right {
+        text-align: center;
+        line-height: calc(100vh - 120px);
+        height: calc(100vh - 120px);
+        background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Header</div>
+    <div class="container">
+      <div class="main">浮动 Float</div>
+      <div class="left">Left</div>
+      <div class="right">Sidebar</div>
+    </div>
+    <div class="footer">Footer</div>
+  </body>
+</html>

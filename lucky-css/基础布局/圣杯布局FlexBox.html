@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://lucky-file-project.oss-cn-hangzhou.aliyuncs.com/lucky.png"
+    />
+    <title>圣杯布局Flexbox</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      /* 主容器 */
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      /* 头部和底部 高度 内容垂直水平居中*/
+      .header,
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+      }
+
+      /* 主体内容区 */
+      .content {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+      }
+
+      /* 左中右 内容居中 */
+      .left,
+      .right,
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .left,
+      .right {
+        width: 150px;
+        background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+      }
+
+      .main {
+        flex: 1;
+        font-size: 40px;
+        font-weight: bold;
+        background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Header</div>
+      <div class="content">
+        <div class="left">Left</div>
+        <div class="main">圣杯布局（Flexbox）</div>
+        <div class="right">Sidebar</div>
+      </div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
