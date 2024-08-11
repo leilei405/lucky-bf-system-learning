@@ -7,54 +7,43 @@
       rel="icon"
       href="https://lucky-file-project.oss-cn-hangzhou.aliyuncs.com/lucky.png"
     />
-    <title>圣杯布局Float</title>
+    <title>绝对定位 absolute</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
 
-      .header {
-        height: 60px;
-      }
-
-      .footer {
-        height: 60px;
+      .container {
+        height: calc(100vh - 120px);
+        position: relative;
         clear: both;
       }
 
-      .container {
-        height: calc(100vh - 120px);
-        padding: 0 200px;
-      }
-
-      .container div {
-        position: relative;
-        float: left;
+      .container > div {
+        position: absolute;
       }
 
       .main {
-        width: 100%;
         height: calc(100vh - 120px);
+        left: 200px;
+        right: 200px;
         text-align: center;
         line-height: calc(100vh - 120px);
         background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
       }
 
       .left {
-        margin-left: -100%;
-        left: -200px;
-        width: 200px;
+        left: 0;
       }
 
       .right {
-        margin-left: -200px;
-        left: 200px;
-        width: 200px;
+        right: 0;
       }
 
       .footer,
       .header {
+        height: 60px;
         text-align: center;
         line-height: 60px;
         background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
@@ -62,9 +51,10 @@
 
       .left,
       .right {
+        width: 200px;
+        height: calc(100vh - 120px);
         text-align: center;
         line-height: calc(100vh - 120px);
-        height: calc(100vh - 120px);
         background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
       }
     </style>
@@ -72,9 +62,10 @@
   <body>
     <div class="header">Header</div>
     <div class="container">
-      <div class="main">浮动 Float</div>
       <div class="left">Left</div>
-      <div class="right">Sidebar</div>
+      <div class="right">Right</div>
+      <div class="main">绝对定位 absolute</div>
+      <div></div>
     </div>
     <div class="footer">Footer</div>
   </body>
